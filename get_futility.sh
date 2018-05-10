@@ -28,6 +28,11 @@ if [ -n "$1" ]; then
     INSTALL_PREFIX="$1"
 fi
 
+if [ ! -d "$INSTALL_PREFIX" ]; then
+    echo "Install prefix not found, exitting..."
+    exit 1
+fi
+
 if [ ! -x "$(command -v wget)" ]; then
     echo "Wget is not installed, exitting..."
     exit 1

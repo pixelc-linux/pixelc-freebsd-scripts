@@ -9,6 +9,11 @@ if [ -n "$1" ]; then
 fi
 shift
 
+if [ ! -d "$INSTALL_PREFIX" ]; then
+    echo "Install prefix not found, exitting..."
+    exit 1
+fi
+
 if [ ! -x "$(command -v $MAKE)" ]; then
     echo "$MAKE not found, exitting..."
     exit 1
