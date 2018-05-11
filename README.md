@@ -18,7 +18,7 @@ Our script chain requires the following commonly installable tools to work:
 - `cpio` - creating ramdisk images (in base system)
 - `tar` - unpacking third party archives (in base system)
 - `ar` - unpacking third party archives (in base system)
-- `lz4c` - kernel and initrd image compression (`pkg install liblz4`)
+- `lz4c` - kernel and initramfs image compression (`pkg install liblz4`)
 - `perl` - mostly used in shell to decode base64 (`pkg install perl5`)
 
 Additionally, it requires additional tools that are not always available:
