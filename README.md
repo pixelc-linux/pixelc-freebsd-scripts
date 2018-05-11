@@ -56,27 +56,16 @@ the reverse of the former (i.e. turn an image into a `zImage` and a ramdisk).
 
 ### Getting futility
 
-This one is a bit harder, because no functional version currently exists for
-FreeBSD (not yet patched to compile and work). Fortunately, FreeBSD ships with
-a Linux binary compatibility layer. We can therefore use the Linux version of
-the tool for the time being. Get it:
+This tool is used to sign the images with Chrome OS signing keys to make them
+flashable. Just like above, we have a version that works on FreeBSD in our
+organization, so get it:
 
 ```
 ./get_futility.sh
 ```
 
-You will need `wget` for this to work. It grabs a package from Fedora 26 -
-you don't need `rpm` because `tar` handles it. The installation prefix works
-the same as for `mkbootimg`.
-
-If you use HardenedBSD, you will need to disable ASLR for the `futility`
-binary as is necessary for all Linux binaries. You also need some Linux
-packages from the repository - `linux_base-c7` and `linux-c7-openssl-libs`
-and of course the Linux emulation enabled.
-
-By default, this fetches a 64-bit binary for 64-bit systems and a 32-bit
-one for 32-bit systems. You can manually pass the arch as a second parameter
-to the script (`i386` to install a 32-bit binary on a 64-bit system).
+This installs just one tool, `futility` and the script works exactly the same
+as for `mkbootimg`.
 
 # Getting a GCC toolchain for Linux/Pixel C
 
