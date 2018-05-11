@@ -27,7 +27,7 @@ Additionally, it requires additional tools that are not always available:
 - `fastboot` - flash and boot the images (`pkg install android-tools-fastboot`)
 - `mkimage` - create `.fit` images from kernel+DTB (`pkg install u-boot-tools`)
 - `mkbootimg` - create unsigned Android boot images (**not available OOTB**)
-- `futility` - o sign images `mkbootimg` creates (**not available OOTB**)
+- `futility` - sign images `mkbootimg` creates (**not available OOTB**)
 
 To build Linux, some more are necessary:
 
