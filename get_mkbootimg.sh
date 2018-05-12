@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. build_tool.sh
+. util/build_tool.sh
 
 get_repo "https://github.com/pixelc-linux/mkbootimg.git" mkbootimg
 build mkbootimg "$@"
